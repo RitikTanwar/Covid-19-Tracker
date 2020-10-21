@@ -1,0 +1,35 @@
+.infoBox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 7.5rem;
+  width: 9rem;
+  margin-right: 0.5rem;
+}
+.infoBox:hover {
+  height: 7.5rem;
+  width: 9rem;
+}
+#red:hover {
+  background-color: rgb(173, 98, 104);
+  /* background-color: rgb(2, 226, 51); */
+}
+#green:hover {
+  background-color: rgb(96, 167, 111);
+}
+#blue:hover {
+  background-color: rgb(88, 137, 177);
+}
+#grey:hover {
+  background-color: rgb(10, 10, 10);
+}
+.infobox_title {
+  font-size: 1rem;
+}
+.infoBox_cases {
+  font-size: 0.8rem;
+}
+.infoBox_total {
+  font-size: 1.5rem;
+}
