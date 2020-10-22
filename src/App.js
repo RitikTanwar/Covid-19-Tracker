@@ -60,9 +60,16 @@ function App() {
     await fetch(url)
       .then((response) => response.json())
       .then(data => {
-        setCountryInfo(data);
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-        setMapZoom(4);
+        if (countryCode !== 'worldWide') {
+          setCountryInfo(data);
+          setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+          setMapZoom(4);
+        }
+        else {
+          setCountryInfo(data);
+          setMapCenter([34.80746, 70]);
+          setMapZoom(2);
+        }
       })
   }
 
