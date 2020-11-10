@@ -14,7 +14,7 @@ function Infobox({ title, cases, total, boxcolor, ...props }) {
                 {/* Title */}
                 <h4 className="infoBox_title" style={mystlye}>{title}</h4>
                 {/* No. of cases */}
-                <p className="infoBox_cases" style={mystlye} >{title === 'Active' ? "" : cases === 0 ? '0' : `+${numeral(cases).format(0, 0)}`} </p>
+                <p className="infoBox_cases" style={mystlye} >{title === 'Active' ? "💙" : cases === 0 ? title === 'Confirmed' ? '❤️' : title === 'Recovered' ? '💚' : '🖤' : `+${numeral(cases).format(0, 0)}`} </p>
                 {/* Total */}
                 <h2 className="infoBox_total" style={mystlye}>{numeral(total).format(0, 0)}</h2>
             </div>

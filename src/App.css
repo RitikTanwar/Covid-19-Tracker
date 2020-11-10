@@ -6,31 +6,51 @@ body {
   background-color: rgb(6, 1, 75);
 }
 
-.app {
+.up {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
 
   color: rgb(215, 255, 36);
 }
-
 .app_left {
   flex: 0.8;
 }
 .app_header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .app_dropdown {
-  background-color: rgb(132, 0, 255);
+  background-color: rgb(13, 111, 202);
   /* margin: 0.4rem; */
 }
 .app_stats {
   display: flex;
+  justify-content: space-evenly;
   /* margin: 0.4rem; */
 }
-@media (max-width: 990px) {
-  .app {
+
+.app_right {
+  background-color: rgb(6, 1, 75);
+  margin-top: 40px;
+  margin-left: -10px;
+}
+
+.app_down {
+  width: 80vw;
+}
+.table_title {
+  margin-left: 5vw;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .up {
     flex-direction: column;
+  }
+  .app_right {
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 15px;
   }
 }

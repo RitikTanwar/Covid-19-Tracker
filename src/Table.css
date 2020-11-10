@@ -1,36 +1,51 @@
 .table {
-  margin: 0%;
-  overflow: scroll;
-  height: 300px;
+  height: 95vh;
+  width: 90vw;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-right: 5vw;
+  margin-left: 5vw;
 }
-.table th {
-  display: flex;
-  justify-content: center;
-  font-size: 1.4rem;
-  font-family: sans-serif;
-  padding: 0.5rem;
-  /* position: absolute; */
+
+.table_title {
+  color: aliceblue;
 }
+
 .table tr:nth-of-type(odd) {
-  background-color: rgb(133, 247, 148);
-  border: black;
+  background-color: rgba(238, 223, 255, 0.705);
+  color: rgb(0, 0, 0);
 }
-.table tr {
-  display: flex;
-  justify-content: space-between;
+.table_heading {
+  font-size: 25px;
+  background-color: indianred;
+}
+.table_row {
+  font-size: 20px;
 }
 
-.table td {
-  padding: 0.5rem;
+.table_column {
+  text-align: center;
 }
-
 .table tr:nth-of-type(even) {
-  background-color: rgb(30, 214, 168);
+  background-color: gold;
+  color: rgb(170, 9, 9);
 }
 
-/* ::-webkit-scrollbar {
+@media (max-width: 990px) {
+  .table {
+    overflow-x: auto;
+  }
+  .table_heading {
+    font-size: 15px;
+  }
+  .table_column {
+    font-size: 12px;
+  }
+}
+
+::-webkit-scrollbar {
   width: 0;
-} */
+}
 
 #scrollpath {
   position: fixed;

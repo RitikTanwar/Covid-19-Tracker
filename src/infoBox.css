@@ -33,3 +33,22 @@
 .infoBox_total {
   font-size: 1.5rem;
 }
+
+@media (max-width: 600px) {
+  .infoBox {
+    margin-right: 2px;
+    width: 80px;
+  }
+  .infobox_title {
+    font-size: 5px;
+  }
+  .infoBox_cases {
+    font-size: 10px;
+  }
+  .infoBox_total {
+    font-size: 10px;
+  }
+  .infoBox:hover {
+    width: 80px;
+  }
+}

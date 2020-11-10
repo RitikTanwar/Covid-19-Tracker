@@ -68,54 +68,65 @@ function App() {
         else {
           setCountryInfo(data);
           setMapCenter([34.80746, 70]);
-          setMapZoom(2);
+          setMapZoom(3);
         }
       })
   }
 
   return (
     <div className="app">
-      <div className="app_left">
-        <div className="app_header">
-          <h1>COVID 19 TRACKER</h1>
-          <FormControl className="app_dropdown">
-            <Select variant="outlined" onChange={onCountryChange} value={country}>
-              <MenuItem value='worldWide'>Worldwide</MenuItem>
-              {countries.map((country) => (
-                < MenuItem value={country.value} > { country.name}</MenuItem>
-              ))}
-              {/* key={country.id} */}
-            </Select>
-          </FormControl>
-        </div>
-        <div className="app_stats">
-          {/* Info boxes */}
-          <InfoBox onClick={e => setCasesType('cases')} boxcolor="red" title="Confirmed" cases={countryInfo.todayCases} total={countryInfo.cases} />
-          {/* Info Box */}
-          <InfoBox onClick={e => setCasesType('active')} boxcolor="blue" title="Active" total={countryInfo.active} />
-          {/* Info boxes */}
-          <InfoBox onClick={e => setCasesType('recovered')} boxcolor="rgb(0, 255, 13)" title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
-          {/* Info boxes */}
-          <InfoBox onClick={e => setCasesType('deaths')} boxcolor="grey" title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
-          {/* Info Box
+      <div className="up">
+        <div className="app_left">
+          <div className="app_header">
+            <h1>COVID 19 TRACKER</h1>
+            <FormControl className="app_dropdown">
+              <Select variant="outlined" onChange={onCountryChange} value={country}>
+                <MenuItem value='worldWide'>Worldwide</MenuItem>
+                {countries.map((country) => (
+                  < MenuItem value={country.value} > { country.name}</MenuItem>
+                ))}
+                {/* key={country.id} */}
+              </Select>
+            </FormControl>
+          </div>
+          <div className="app_stats">
+            {/* Info boxes */}
+            <InfoBox onClick={e => setCasesType('cases')} boxcolor="red" title="Confirmed" cases={countryInfo.todayCases} total={countryInfo.cases} />
+            {/* Info Box */}
+            <InfoBox onClick={e => setCasesType('active')} boxcolor="blue" title="Active" total={countryInfo.active} />
+            {/* Info boxes */}
+            <InfoBox onClick={e => setCasesType('recovered')} boxcolor="rgb(0, 255, 13)" title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
+            {/* Info boxes */}
+            <InfoBox onClick={e => setCasesType('deaths')} boxcolor="grey" title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+            {/* Info Box
           <InfoBox title="Test" cases={countryInfo.tests} total={countryInfo.testsPerOneMillion} /> */}
-          {/* Map */}
+            {/* Map */}
+          </div>
+          <Map
+            countries={mapCountries}
+            casesType={casesTypes}
+            center={mapCenter}
+            zoom={mapZoom}
+          />
         </div>
-        <Map
-          countries={mapCountries}
-          casesType={casesTypes}
-          center={mapCenter}
-          zoom={mapZoom}
-        />
+        <Card className="app_right">
+          {/* Graph */}
+          <h1>Worldwide Cases</h1>
+          <LineGraph casesType='cases' color="red" />
+          <hr></hr>
+          <hr></hr>
+          <h1>Worldwide Recoveries</h1>
+          <LineGraph casesType='recovered' color="green" />
+          <hr></hr>
+          <hr></hr>
+          <h1>Worldwide Deaths</h1>
+          <LineGraph casesType='deaths' color="gray" />
+        </Card >
       </div>
-      <Card className="app_right">
-
-        <h1>Live cases by country</h1>
+      <div className="down">
+        <h1 class="table_title">Live cases by country</h1>
         <Table countries={tableData} />
-        {/* Graph */}
-        <h1>Worldwide {casesTypes}</h1>
-        <LineGraph casesType={casesTypes !== 'active' ? casesTypes : 'cases'} />
-      </Card >
+      </div>
     </div>
   );
 }
