@@ -1,11 +1,13 @@
 .map {
-  height: 58vh;
+  height: 65vh;
   width: 50vw;
   background-color: white;
   padding: 1rem;
   border-radius: 20px;
   margin-left: 0;
   box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  /* margin-top: 40px; */
 }
 
 .map .leaflet-container {
@@ -28,7 +30,7 @@
   background-size: cover;
   border-radius: 10px;
 }
-@media (max-width: 990px) {
+@media (max-width: 1025px) {
   .map {
     width: 80vw;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardContent, Typography } from "@material-ui/core"
-import { green, purple } from '@material-ui/core/colors';
+// import { Card, CardContent, Typography } from "@material-ui/core"
+// import { green, purple } from '@material-ui/core/colors';
 import "./infoBox.css";
 import numeral from 'numeral';
 

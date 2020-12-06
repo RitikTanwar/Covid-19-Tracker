@@ -111,16 +111,22 @@ function App() {
         </div>
         <Card className="app_right">
           {/* Graph */}
-          <h1>Worldwide Cases</h1>
-          <LineGraph casesType='cases' color="red" />
-          <hr></hr>
-          <hr></hr>
-          <h1>Worldwide Recoveries</h1>
-          <LineGraph casesType='recovered' color="green" />
-          <hr></hr>
-          <hr></hr>
-          <h1>Worldwide Deaths</h1>
-          <LineGraph casesType='deaths' color="gray" />
+          <div className="app_rightElement">
+            <h1>Worldwide Cases</h1>
+            <LineGraph casesType='cases' color="red" />
+            <hr></hr>
+            <hr></hr>
+          </div>
+          <div className="app_rightElement">
+            <h1>Worldwide Recoveries</h1>
+            <LineGraph casesType='recovered' color="green" />
+            <hr></hr>
+            <hr></hr>
+          </div>
+          <div className="app_rightElement">
+            <h1>Worldwide Deaths</h1>
+            <LineGraph casesType='deaths' color="gray" />
+          </div>
         </Card >
       </div>
       <div className="down">

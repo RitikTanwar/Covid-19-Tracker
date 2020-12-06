@@ -1,6 +1,7 @@
 import React from 'react';
 import numeral from 'numeral';
 import './Table.css';
+import SortIcon from '@material-ui/icons/Sort';
 
 function Table({ countries }) {
     // Scrool bar
@@ -10,21 +11,24 @@ function Table({ countries }) {
     //     let progressHeight = (window.pageYOffset / totalHeight) * 100;
     //     progress.style.height = progressHeight + "%";
     // }
+    const handleClick = () => {
+
+    }
     return (
         <div className="table">
             <table>
                 <div id="progressbar"></div>
                 <div id="scrollpath"></div>
                 <tr className="table_heading">
-                    <th >Country</th>
-                    <th >Total Cases</th>
-                    <th >Today's Cases</th>
-                    <th >Total Deaths</th>
-                    <th >Today's Deaths</th>
-                    <th >Recoveries</th>
-                    <th >Today's Recoveries</th>
-                    <th >Active Cases</th>
-                    <th >Total Tests</th>
+                    <th >Country  <SortIcon onClick={handleClick} /></th>
+                    <th >Total Cases <SortIcon /></th>
+                    <th >Today's Cases <SortIcon /></th>
+                    <th >Total Deaths <SortIcon /></th>
+                    <th >Today's Deaths <SortIcon /></th>
+                    <th >Recoveries <SortIcon /></th>
+                    <th >Today's Recoveries<SortIcon /></th>
+                    <th >Active Cases <SortIcon /></th>
+                    <th >Total Tests <SortIcon /></th>
                 </tr>
                 <td></td>
                 <td></td>

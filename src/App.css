@@ -34,6 +34,11 @@ body {
   background-color: rgb(6, 1, 75);
   margin-top: 40px;
   margin-left: -10px;
+  width: 40vw;
+}
+
+.app_rightElement {
+  margin: 30px;
 }
 
 .app_down {
@@ -44,6 +49,13 @@ body {
   font-size: 40px;
 }
 @media (max-width: 1025px) {
+  .app_header {
+    flex-direction: column;
+  }
+  .app_dropdown {
+    width: 70vw;
+    justify-content: center;
+  }
   .up {
     flex-direction: column;
   }
